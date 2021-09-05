@@ -32,7 +32,7 @@ rm(DT_test_y,DT_test_X,DT_train_y,DT_train_X,DT_train_subject,DT_test_subject)
 # Grab only the fields with "mean" and "std"
 mean_and_std <- c(grep("mean|std",names(DT_X),value=TRUE))
 # filter down to only these fields
-DT_X <- DT_X %>% select(mean_and_std)
+DT_X <- DT_X %>% select(all_of(mean_and_std))
 
 
 ##3. Manipulate the column names into tidydata form: ##
@@ -60,9 +60,9 @@ numeric_col <- names(select(DT,!subjectid:activity))
 DT_ave <- DT %>% group_by(activity,subjectid) %>% summarise(across(all_of(numeric_col),mean))
 
 
-## Write each data set to text file 
-write.table(DT,"UCI_HAR_tidy.txt",sep = ",")
-write.table(DT_ave,"averages.txt",sep = ",")
+## Write data set to text file 
+#write.table(DT,"UCI_HAR_tidy.txt",sep = ",")
+write.table(DT_ave,"Assignment_dataset.txt",sep = ",",row.names = FALSE)
 
 
 

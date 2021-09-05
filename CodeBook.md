@@ -30,7 +30,7 @@ Extract the only labels of the columns with "mean" and "std", given in **mean_an
 Using the activity data dictionary extracted from *activity_labels.txt*, rename all the results columns with the corresponding human readable name.
 
 
-Merge the results (X set) with the corresponding activity labels (y sets) and subject labels (subject set) to create **DT** which is the first tidy dataset that is read out into text file.
+Merge the results (X set) with the corresponding activity labels (y sets) and subject labels (subject set) to create **DT** which is used for the next step.
 
 
 ### 5. Average values for each activity and each subject
@@ -38,8 +38,7 @@ For second dataset, **DT_ave**, Group by the two identifier columns, then take t
 
 
 ### Write each data set to text file
-- *UCI_HAR_tidy.txt*: tidy dataset with combined train and test data (results, activity and subject labels) for all the mean and standard deviation data only.
-- *averages.txt*: tidy dataset with aggregated values across all numerical columns in *UCI_HAR_tidy.txt* grouped by each subject and each activity.
+- *Assignment_dataset.txt*: tidy dataset with aggregated values across all numerical columns grouped by each subject and each activity.
 
 
 

@@ -5,4 +5,5 @@
 - *UCI HAR Dataset*: folder containing experimental datasets relating to accelerometer and gyronscope data from wearable computing. See README.md file within folder for more details.
 - *run_analysis.R*: R script the will extract train and test data from the */UCI HAR Dataset* folder and merge then process the data into a tidy dataset.
 - *CodeBook.md*: Codebook that outlines the process, the variables and the data involved in the run_analysis.R.
+- *Assignment_dataset.txt*: tidy dataset extracted from *run_analysis.R*.
 
